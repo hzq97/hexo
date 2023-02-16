@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 黄志强
+title: 刺猬
 subtitle: '一位孜孜不倦的上进者'
 description: ''
 keywords:
-author: '黄志强'
+author: '刺猬'
 language: zh-CN
 timezone: ''
 
@@ -44,7 +44,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
