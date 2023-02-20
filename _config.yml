@@ -103,3 +103,7 @@ theme: hexo-theme-Claudia
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+admin:
+  username: hzq
+  password_hash: $2a$10$GV6qE5.O3kFZp9mHkrykfuUD/otNfcYT/rZzPxoHLJrJYhNRvDahW
+  secret: 不告诉你
