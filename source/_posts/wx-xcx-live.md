@@ -5,7 +5,6 @@ tags:
 categories: 
     - 微信小程序
 ---
-
 #   开发事项
 ##  1. 在微信公众平台开通微信直播功能
 ``` 
@@ -25,7 +24,7 @@ categories:
 "plugins": {
     "live-player-plugin": {
         "version": "1.2.8", // 注意填写该直播组件最新版本号，微信开发者工具调试时可获取最新版本号（复制时请去掉注释）
-        "provider": "wx2b03c6e691cd7370" // 必须填该直播组件appid，该示例值即为直播组件appid（复制时请去掉注释）
+        "provider": "" // 必须填该直播组件appid，该示例值即为直播组件appid（复制时请去掉注释）
     }
 }
 ```
@@ -36,7 +35,7 @@ categories:
         "plugins": {
             "live-player-plugin": {
                 "version": "1.2.8", // 注意该直播组件最新版本号，微信开发者工具调试时可获取最新版本号（复制时请去掉注释）
-                "provider": "wx2b03c6e691cd7370" // 必须填该直播组件appid，该示例值即为直播组件appid（复制时请去掉注释）
+                "provider": "" // 必须填该直播组件appid，该示例值即为直播组件appid（复制时请去掉注释）
             }
         }
     }
@@ -48,7 +47,7 @@ categories:
 - 使用navigator组件跳转进入直播间
 ```
 <!--index.wxml-->
-<navigator url="plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id={{roomId}}&custom_params={{customParams}}"></navigator>
+<navigator url="plugin-private://appid/pages/live-player-plugin?room_id={{roomId}}&custom_params={{customParams}}"></navigator>
 ```
 ```
 // index.js
@@ -66,12 +65,11 @@ this.setData({
 let roomId = [直播房间id] // 填写具体的房间号，可通过下面【获取直播房间列表】 API 获取
 let customParams = encodeURIComponent(JSON.stringify({ path: 'pages/index/index', pid: 1 })) // 开发者在直播间页面路径上携带自定义参数（如示例中的path和pid参数），后续可以在分享卡片链接和跳转至商详页时获取，详见【获取自定义参数】、【直播间到商详页面携带参数】章节（上限600个字符，超过部分会被截断）
 wx.navigateTo({
-    url: `plugin-private://wx2b03c6e691cd7370/pages/live-player-plugin?room_id=${roomId}&custom_params=${customParams}`
+    url: `plugin-private://appid/pages/live-player-plugin?room_id=${roomId}&custom_params=${customParams}`
 })
 ```
 - 效果图
 
-![image](https://note.youdao.com/yws/res/40942/4A8086E8F35A40C581FBAE961B6AE69D)
 
 ##  3.组件接口
 ### 订阅组件subscribe
@@ -81,7 +79,7 @@ wx.navigateTo({
 ```
 {
     "usingComponents": {
-        "subscribe": "plugin-private://wx2b03c6e691cd7370/components/subscribe/subscribe"
+        "subscribe": "plugin-private://appid/components/subscribe/subscribe"
     }
 }
 ```

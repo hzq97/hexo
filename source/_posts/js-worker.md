@@ -5,8 +5,6 @@ tags:
 categories: 
     - javascript
 ---
-
-[toc]
 ### Web worker  客户端多线程
 #####   实例
 ```
